@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSCRIÇÃO - EDITAL SECTI/FAPEMA 05/2023</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="box">
+    <form action="cadastro.php" method="get" autocomplete="on">
+      <fieldset>
+        <legend><b>INSCREVA-SE</b></legend>
+        <br><br>
+        <div class="inputBox">
+          <label for="nome" class="labelInput"><b>NOME COMPLETO</b></label>
+          <input type="text" name="nome" id="nome" class="inputUser" required>
+        </div>
+        <br><br>
+        <label for="dataNascimento"><b>DATA DE NASCIMENTO</b></label>
+        <input type="date" name="dataNascimento" id="dataNascimento" required min="2008-05-03">
+        <br><br>
+        <div class="inputBox">
+          <label for="cpf" class="labelInput"><b>CPF</b></label>
+          <input type="text" id="cpf" name="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+            title="Digite um CPF válido (apenas números)" class="inputUser" required>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <label for="email" class="labelInput"><b>E-MAIL</b></label>
+          <input type="email" name="email" id="email" class="inputUser" required>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <label for="telefone" class="labelInput"><b>TELEFONE COM DDD</b></label>
+          <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+        </div>
+        <br><br>
+        <div class="form-control">
+          <label for="escolaridade"><b>ESCOLARIDADE</b></label>
+          <select name="escolaridade" id="escolaridade" required>
+            <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+            <option value="Ensino Médio em Andamento">Ensino Médio em Andamento</option>
+            <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+            <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+          </select>
+        </div>
+        <br><br>
+        <div class="form-control">
+          <label for="trilha"><b>TRILHA</b></label>
+          <select id="trilha" name="trilha" required>
+            <option value="Ciência de Dados">Ciência de Dados</option>
+            <option value="Design e Experiência">Design e Experiência</option>
+            <option value="Programação Back-End">Programação Back-End</option>
+            <option value="Programação de Jogos">Programação de Jogos</option>
+            <option value="Programação Front-End">Programação Front-End</option>
+          </select>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <label for="documento"><b>UPLOAD DE DOCUMENTO</b></label>
+          <div class="upload-container">
+            <fieldset class="file-upload">
+              <input type="file" name="documento" id="documento" accept=".pdf" required>
+              <img src="upload-de-arquivo.png" alt="icon" height="42" width="42">
+              <label for="documento" class="file-label">Selecione arquivo <br>ou arraste para cá <br>PDF</label>
+              <button class="btn-upload">Selecionar</button>
+            </fieldset>
+          </div>
+        </div>
+        <br><br>
+        <div class="inputBox">
+          <input type="checkbox" name="aceitoTermos" id="aceitoTermos" required>
+          <label for="aceitoTermos">Eu li e aceito os termos e condições da <u>Política de Privacidade e Contrato de
+              Prestação de Serviço</u></label>
+        </div>
+        <div class="inputBox">
+          <p style="color: red; font-weight: bold;">*ATENÇÃO: Todos os dados acima são obrigatórios</p>
+        </div>
+        <div class="inputBox">
+          <p><a href="EDITAL_SECTI_Nº_05-2023_–_PROGRAMA_TRILHAS_INOVA_2023.pdf" target="_blank"
+              style="color: #1679AB; text-decoration: none;"><u>*Edital 05/2023</u></a> </p>
+        </div>
+        <div>
+          <input type="submit" name="submit" id="submit" value="Enviar">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="logo">
+    <img src="inova.png" alt="Logo INOVA">
+  </div>
+</body>
+<script src="./focusedLabel.js"></script>
+</html>
